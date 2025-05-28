@@ -1,0 +1,1 @@
+La App de Notas es una aplicación web simple e intuitiva pensada para que puedas crear, editar, guardar y eliminar tus notas de forma rápida y segura. Está desarrollada con tecnologías modernas como React, Firebase y Zustand, lo que permite una experiencia fluida y en tiempo real.
