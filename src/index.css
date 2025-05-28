@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background-primary font-outfit text-content-primary antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-content-primary;
+  }
+
+  h1 {
+    @apply text-3xl font-semibold;
+  }
+
+  h2 {
+    @apply text-2xl font-medium;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+  }
+
+  ::selection {
+    @apply bg-ui-primary/30 text-content-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ui-primary hover:bg-ui-hover text-white font-medium px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-ui-secondary hover:bg-ui-secondary/80 text-white font-medium px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-background-tertiary/50 text-content-secondary hover:text-content-primary px-3 py-1.5 rounded-md transition-colors;
+  }
+
+  .icon-btn {
+    @apply p-1.5 rounded-md text-content-secondary hover:text-content-primary hover:bg-background-tertiary/50 transition-colors;
+  }
+
+  .input {
+    @apply bg-background-secondary border border-background-tertiary rounded-md px-3 py-2 text-content-primary focus:outline-none focus:ring-1 focus:ring-ui-primary transition-colors;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-ui-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background-primary;
+  }
+}
+
+/* TipTap editor styles */
+.ProseMirror {
+  @apply min-h-[300px] p-6 outline-none;
+}
+
+.ProseMirror p {
+  @apply mb-3;
+}
+
+.ProseMirror h1 {
+  @apply text-3xl font-semibold mb-6 mt-8;
+}
+
+.ProseMirror h2 {
+  @apply text-2xl font-medium mb-4 mt-6;
+}
+
+.ProseMirror h3 {
+  @apply text-xl font-medium mb-3 mt-5;
+}
+
+.ProseMirror ul {
+  @apply list-disc pl-6 mb-4;
+}
+
+.ProseMirror ol {
+  @apply list-decimal pl-6 mb-4;
+}
+
+.ProseMirror ul li, .ProseMirror ol li {
+  @apply mb-1;
+}
+
+.ProseMirror a {
+  @apply text-ui-primary hover:text-ui-hover underline;
+}
+
+.ProseMirror blockquote {
+  @apply border-l-4 border-background-tertiary pl-4 italic text-content-secondary;
+}
+
+.ProseMirror pre {
+  @apply bg-background-secondary p-4 rounded-md font-mono text-sm mb-4 overflow-x-auto;
+}
+
+.ProseMirror code {
+  @apply font-mono text-sm bg-background-secondary px-1.5 py-0.5 rounded;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  @apply text-content-secondary;
+  content: attr(data-placeholder);
+  float: left;
+  pointer-events: none;
+  height: 0;
+}
+
+/* Fullscreen mode */
+.fullscreen {
+  @apply fixed inset-0 z-50 bg-background-primary;
+}
